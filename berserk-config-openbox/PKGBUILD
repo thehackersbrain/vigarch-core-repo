@@ -1,6 +1,6 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 pkgname=berserk-config-openbox
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="Default Openbox configuration for Berserk Arch"
 arch=('any')
@@ -16,4 +16,5 @@ install="$pkgname.install"
 package() {
   install -d "${pkgdir}/etc/skel/.config"
   cp -r "${srcdir}/berserk-config-openbox/openbox" "${pkgdir}/etc/skel/.config/"
+  chmod 755 "${pkgdir}/etc/skel/.config/openbox/autostart"
 }
