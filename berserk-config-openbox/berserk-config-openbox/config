@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+[remote "origin"]
+	url = https://github.com/thehackersbrain/berserk-config-openbox.git
+	tagOpt = --no-tags
+	fetch = +refs/*:refs/*
+	mirror = true
