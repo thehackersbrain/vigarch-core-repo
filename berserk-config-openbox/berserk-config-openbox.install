@@ -8,6 +8,8 @@ post_install() {
   echo ">>> you can copy the files with the following command:"
   echo ">>>"
   echo ">>> cp -r /etc/skel/.config/openbox ~/.config/"
+  echo ">>> cp -r /etc/skel/.config/kitty ~/.config/"
+  echo ">>> cp -r /etc/skel/.config/polybar ~/.config/"
   echo ">>>"
   echo ">>> (Warning: This will overwrite your existing Openbox configuration.)"
   echo ">>>"
