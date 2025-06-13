@@ -1,12 +1,13 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 pkgname=berserk-config-openbox
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="Default Openbox configuration for Berserk Arch"
 arch=('any')
 url="https://github.com/thehackersbrain/berserk-config-openbox"
 license=('GPL3')
-depends=('openbox')
+# depends=('openbox')
+depends=()
 
 source=('berserk-config-openbox::git+https://github.com/thehackersbrain/berserk-config-openbox.git')
 sha256sums=('SKIP')
