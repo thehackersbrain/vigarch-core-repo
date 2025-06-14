@@ -1,6 +1,6 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 pkgname=berserk-config-openbox
-pkgver=1.9.1
+pkgver=1.9.2
 pkgrel=1
 pkgdesc="Default Openbox configuration for Berserk Arch"
 arch=('any')
@@ -21,7 +21,4 @@ package() {
   cp -r "${srcdir}/berserk-config-openbox/kitty" "${pkgdir}/etc/skel/.config/"
   cp -r "${srcdir}/berserk-config-openbox/polybar" "${pkgdir}/etc/skel/.config/"
   chmod 755 "${pkgdir}/etc/skel/.config/polybar/launch.sh"
-  cp -r "${srcdir}/berserk-config-openbox/oh-my-zsh" "${pkgdir}/etc/skel/.oh-my-zsh"
-  cp "${srcdir}/berserk-config-openbox/zshrc" "${pkgdir}/etc/skel/.zshrc"
-  chmod 644 "${pkgdir}/etc/skel/.zshrc"
 }
