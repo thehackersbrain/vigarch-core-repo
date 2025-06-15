@@ -1,6 +1,7 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
+
 pkgname=berserk-config-openbox
-pkgver=1.9.3
+pkgver=1.9.5
 pkgrel=1
 pkgdesc="Default Openbox configuration for Berserk Arch"
 arch=('any')
@@ -22,4 +23,6 @@ package() {
   cp -r "${srcdir}/berserk-config-openbox/polybar" "${pkgdir}/etc/skel/.config/"
   chmod 755 "${pkgdir}/etc/skel/.config/polybar/launch.sh"
   cp -r "${srcdir}/berserk-config-openbox/sublime-text" "${pkgdir}/etc/skel/.config/"
+  install -d "${pkgdir}/usr/share/xsessions/"
+  install -Dm644 "${srcdir}/berserk-config-openbox/openbox.desktop" "${pkgdir}/usr/share/xsessions/openbox.desktop"
 }
