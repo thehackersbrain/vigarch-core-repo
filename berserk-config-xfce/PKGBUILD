@@ -1,7 +1,7 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 
 pkgname=berserk-config-xfce
-pkgver=0.1.2
+pkgver=0.1.4
 pkgrel=1
 pkgdesc="Default XFCE configuration for Berserk Arch"
 arch=('any')
@@ -21,6 +21,7 @@ package() {
   cp -r "${srcdir}/berserk-config-xfce/xfce4" "${pkgdir}/etc/skel/.config/"
   cp -r "${srcdir}/berserk-config-xfce/kitty" "${pkgdir}/etc/skel/.config/"
   cp -r "${srcdir}/berserk-config-xfce/polybar" "${pkgdir}/etc/skel/.config/"
+  cp -r "${srcdir}/berserk-config-xfce/rofi" "${pkgdir}/etc/skel/.config/"
   chmod 755 "${pkgdir}/etc/skel/.config/polybar/launch.sh"
   cp -r "${srcdir}/berserk-config-xfce/sublime-text" "${pkgdir}/etc/skel/.config/"
   # install -d "${pkgdir}/usr/share/xsessions/"
