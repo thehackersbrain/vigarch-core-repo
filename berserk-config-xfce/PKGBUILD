@@ -1,7 +1,7 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 
 pkgname=berserk-config-xfce
-pkgver=0.2.7
+pkgver=0.2.8
 pkgrel=1
 pkgdesc="Default XFCE configuration for Berserk Arch"
 arch=('any')
@@ -43,12 +43,13 @@ package() {
   cp "${srcdir}/berserk-config-xfce/.vimrc" "${pkgdir}/etc/skel/"
 
   mkdir -p "${pkgdir}/${berserkconfig}/home"
-  cp -r "${srcdir}/berserk-config-xfce/xfce4" "${pkgdir}/${berserkconfig}/home/.config/"
-  cp -r "${srcdir}/berserk-config-xfce/kitty" "${pkgdir}/${berserkconfig}/home/.config/"
-  cp -r "${srcdir}/berserk-config-xfce/polybar" "${pkgdir}/${berserkconfig}/home/.config/"
-  cp -r "${srcdir}/berserk-config-xfce/rofi" "${pkgdir}/${berserkconfig}/home/.config/"
-  cp -r "${srcdir}/berserk-config-xfce/sublime-text" "${pkgdir}/${berserkconfig}/home/.config/"
-  cp "${srcdir}/berserk-config-xfce/.vimrc" "${pkgdir}/${berserkconfig}/home/"
+  cp -r "${pkgdir}/etc/skel/" "${pkgdir}/${berserkconfig}/home/"
+  # cp -r "${srcdir}/berserk-config-xfce/xfce4" "${pkgdir}/${berserkconfig}/home/.config/"
+  # cp -r "${srcdir}/berserk-config-xfce/kitty" "${pkgdir}/${berserkconfig}/home/.config/"
+  # cp -r "${srcdir}/berserk-config-xfce/polybar" "${pkgdir}/${berserkconfig}/home/.config/"
+  # cp -r "${srcdir}/berserk-config-xfce/rofi" "${pkgdir}/${berserkconfig}/home/.config/"
+  # cp -r "${srcdir}/berserk-config-xfce/sublime-text" "${pkgdir}/${berserkconfig}/home/.config/"
+  # cp "${srcdir}/berserk-config-xfce/.vimrc" "${pkgdir}/${berserkconfig}/home/"
 
   # install -d "${pkgdir}/usr/share/xsessions/"<F18>
   # install -Dm644 "${srcdir}/berserk-config-xfce/berserk.desktop" "${pkgdir}/usr/share/xsessions/berserk.desktop"
