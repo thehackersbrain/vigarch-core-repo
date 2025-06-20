@@ -1,7 +1,7 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 
 pkgname=berserk-config-xfce
-pkgver=0.1.8
+pkgver=0.1.9
 pkgrel=1
 pkgdesc="Default XFCE configuration for Berserk Arch"
 arch=('any')
@@ -35,7 +35,9 @@ package() {
   cp -r "${srcdir}/kali-themes/share/qt5ct/" "${pkgdir}/usr/share/qt5ct/"
   cp -r "${srcdir}/kali-themes/share/qt6ct/" "${pkgdir}/usr/share/qt6ct/"
   install -Dm644 "${srcdir}/berserk-config-xfce/berserk-environment" "${pkgdir}/etc/berserk-environment"
-  # install -d "${pkgdir}/usr/share/xsessions/"
+  mkdir -p "${pkgdir}/usr/share/backgrounds/xfce/"
+  cp "${srcdir}/berserk-config-xfce/arch.png" "${pkgdir}/usr/share/backgrounds/xfce/arch.png"
+  # install -d "${pkgdir}/usr/share/xsessions/"<F18>
   # install -Dm644 "${srcdir}/berserk-config-xfce/berserk.desktop" "${pkgdir}/usr/share/xsessions/berserk.desktop"
   # install -Dm644 "${srcdir}/berserk-config-xfce/berserk-xfce.desktop" "${pkgdir}/usr/share/xsessions/berserk-xfce.desktop"
   # install -d "${pkgdir}/etc/sddm.conf.d"
