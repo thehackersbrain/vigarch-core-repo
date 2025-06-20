@@ -1,7 +1,7 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 
 pkgname=berserk-config-xfce
-pkgver=0.2.8
+pkgver=0.2.9
 pkgrel=1
 pkgdesc="Default XFCE configuration for Berserk Arch"
 arch=('any')
@@ -11,7 +11,7 @@ depends=()
 
 source=('berserk-config-xfce::git+https://github.com/thehackersbrain/berserk-config-xfce.git')
 sha256sums=('SKIP')
-berserkconfig="usr/share/berserk-arch/skel"
+berserkconfig="usr/share/berserk-arch"
 
 install="$pkgname.install"
 
@@ -41,9 +41,11 @@ package() {
   mkdir -p "${pkgdir}/etc/xdg/autostart/"
   install -Dm644 "${srcdir}/berserk-config-xfce/polybar.desktop" "${pkgdir}/etc/xdg/autostart/polybar.desktop"
   cp "${srcdir}/berserk-config-xfce/.vimrc" "${pkgdir}/etc/skel/"
+  cp "${srcdir}/berserk-config-xfce/test" "${pkgdir}/etc/skel/"
 
-  mkdir -p "${pkgdir}/${berserkconfig}/home"
+  install -d "${pkgdir}/${berserkconfig}/home"
   cp -r "${pkgdir}/etc/skel/" "${pkgdir}/${berserkconfig}/home/"
+
   # cp -r "${srcdir}/berserk-config-xfce/xfce4" "${pkgdir}/${berserkconfig}/home/.config/"
   # cp -r "${srcdir}/berserk-config-xfce/kitty" "${pkgdir}/${berserkconfig}/home/.config/"
   # cp -r "${srcdir}/berserk-config-xfce/polybar" "${pkgdir}/${berserkconfig}/home/.config/"
