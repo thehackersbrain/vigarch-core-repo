@@ -69,7 +69,7 @@ Presentation
     Text {
         anchors.horizontalCenter: background2.horizontalCenter
         anchors.top: background2.bottom
-        text: "Arch Calamares Installer"
+        text: "Berserk Arch Calamares Installer"
         wrapMode: Text.WordWrap
         width: presentation.width
         horizontalAlignment: Text.Center
