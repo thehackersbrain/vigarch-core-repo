@@ -161,9 +161,10 @@ images:
     # productIcon:         "arch.png"
     # productLogo:         "arch.png"
     # productWallpaper:    "wallpaper.png"
-    productIcon:         "logo.png"
-    productLogo:         "logo.png"
-    productWelcome:      "calamares_installer.png"
+    productIcon:         "logo.svg"
+    productLogo:         "logo.svg"
+    # productWelcome:      "calamares_installer.png"
+    productWelcome:      "welcome.png"
 
 # Colors for text and background components.
 #

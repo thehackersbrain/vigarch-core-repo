@@ -35,21 +35,21 @@ Presentation
 
     Image {
         id: background1
-        source: "1.png"
+        source: "slides/1.png"
         width: parent.width; height: parent.height
         verticalAlignment: Image.AlignTop
         fillMode: Image.Stretch
         anchors.fill: parent
     	}
 
-    Text {
-        anchors.horizontalCenter: background1.horizontalCenter
-        anchors.top: background1.bottom
-        text: "Welcome to"
-        wrapMode: Text.WordWrap
-        width: presentation.width
-        horizontalAlignment: Text.Center
-    	}
+    // Text {
+    //     anchors.horizontalCenter: background1.horizontalCenter
+    //     anchors.top: background1.bottom
+    //     text: "Welcome to"
+    //     wrapMode: Text.WordWrap
+    //     width: presentation.width
+    //     horizontalAlignment: Text.Center
+    // 	}
     }
 
     Slide {
@@ -59,20 +59,68 @@ Presentation
 
     Image {
         id: background2
-        source: "2.png"
+        source: "slides/2.png"
         width: parent.width; height: parent.height
         verticalAlignment: Image.AlignTop
         fillMode: Image.Stretch
         anchors.fill: parent
     	}
 
-    Text {
-        anchors.horizontalCenter: background2.horizontalCenter
-        anchors.top: background2.bottom
-        text: "Berserk Arch Calamares Installer"
-        wrapMode: Text.WordWrap
-        width: presentation.width
-        horizontalAlignment: Text.Center
+    // Text {
+    //     anchors.horizontalCenter: background2.horizontalCenter
+    //     anchors.top: background2.bottom
+    //     text: "Berserk Arch Calamares Installer"
+    //     wrapMode: Text.WordWrap
+    //     width: presentation.width
+    //     horizontalAlignment: Text.Center
+    // 	}
+    }
+
+
+    Slide {
+
+    anchors.fill: parent
+    anchors.verticalCenterOffset: 0
+
+    Image {
+        id: background3
+        source: "slides/3.png"
+        width: parent.width; height: parent.height
+        verticalAlignment: Image.AlignTop
+        fillMode: Image.Stretch
+        anchors.fill: parent
+    	}
+    }
+
+
+    Slide {
+
+    anchors.fill: parent
+    anchors.verticalCenterOffset: 0
+
+    Image {
+        id: background4
+        source: "slides/4.png"
+        width: parent.width; height: parent.height
+        verticalAlignment: Image.AlignTop
+        fillMode: Image.Stretch
+        anchors.fill: parent
+    	}
+    }
+
+
+    Slide {
+
+    anchors.fill: parent
+    anchors.verticalCenterOffset: 0
+
+    Image {
+        id: background5
+        source: "slides/5.png"
+        width: parent.width; height: parent.height
+        verticalAlignment: Image.AlignTop
+        fillMode: Image.Stretch
+        anchors.fill: parent
     	}
     }
 
