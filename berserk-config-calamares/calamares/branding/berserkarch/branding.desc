@@ -158,9 +158,11 @@ strings:
 # These filenames can also use substitutions from os-release (see above).
 images:
     # productBanner:       "banner.png"
-    productIcon:         "arch.png"
-    productLogo:         "arch.png"
+    # productIcon:         "arch.png"
+    # productLogo:         "arch.png"
     # productWallpaper:    "wallpaper.png"
+    productIcon:         "logo.png"
+    productLogo:         "logo.png"
     productWelcome:      "calamares_installer.png"
 
 # Colors for text and background components.
