@@ -52,6 +52,11 @@ Os_release() {
   fi
 }
 
+Grub_theme() {
+  sed -i -e "s|#GRUB_THEME=.*|GRUB_THEME=\"/usr/share/grub/themes/berserk/theme.txt\"|g" /etc/default/grub
+  update-grub
+}
+
 Issues() {
   sed -i 's|Arch|Berserk Arch|g' /etc/issue /usr/share/factory/etc/issue
 }
@@ -64,6 +69,7 @@ Main() {
   case "$hookname" in
   os-release) Os_release ;;
   lsb-release) Lsb_release ;;
+  grub-theme) Grub_theme ;;
   "")
     Os_release
     Lsb_release
