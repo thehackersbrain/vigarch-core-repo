@@ -1,7 +1,7 @@
 # Maintainer: Gaurav Raj (@thehackersbrain) <me@thehackersbrain.xyz>
 
 pkgname=berserk-hooks
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc='Berserk Arch pacman hooks'
 arch=('any')
@@ -15,6 +15,7 @@ source=(
   $_url/berserk-os-release.hook
   $_url/berserk-lsb-release.hook
   $_url/berserk-grub-theme.hook
+  $_url/berserk-plymouth-theme.hook
   $_url/${pkgname}.hook
   $_url/${pkgname}-runner
 )
@@ -32,6 +33,7 @@ package() {
   install -Dm644 berserk-lsb-release.hook $hooks/berserk-lsb-release.hook
   install -Dm644 berserk-os-release.hook $hooks/berserk-os-release.hook
   install -Dm644 berserk-grub-theme.hook $hooks/berserk-grub-theme.hook
+  install -Dm644 berserk-plymouth-theme.hook $hooks/berserk-plymouth-theme.hook
   install -Dm644 ${pkgname}.hook $hooks/${pkgname}.hook
 
   install -Dm755 ${pkgname}-runner $bin/${pkgname}-runner

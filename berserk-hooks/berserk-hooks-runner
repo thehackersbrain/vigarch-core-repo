@@ -57,6 +57,10 @@ Grub_theme() {
   update-grub
 }
 
+Plymouth_theme() {
+  plymouth-set-default-theme -R berserk
+}
+
 Issues() {
   sed -i 's|Arch|Berserk Arch|g' /etc/issue /usr/share/factory/etc/issue
 }
@@ -70,6 +74,7 @@ Main() {
   os-release) Os_release ;;
   lsb-release) Lsb_release ;;
   grub-theme) Grub_theme ;;
+  plymouth-theme) Plymouth_theme ;;
   "")
     Os_release
     Lsb_release
