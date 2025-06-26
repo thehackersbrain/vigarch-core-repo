@@ -1,4 +1,4 @@
-# Vigilante Arch PKG Repository
+# Vigilante Arch Core Repository
 
 ```mermaid
 sequenceDiagram
